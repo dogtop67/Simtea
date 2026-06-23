@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simtea</title>
     <style>
       .main-image {
@@ -202,15 +204,71 @@
       .single-price .current-price {
         color: #ffffff;
       }
-
       @media (max-width: 960px) {
+        header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+        header p, div3, div7 {
+          position: static !important;
+          margin: 0 !important;
+          text-align: center;
+        }
+        header img, div3 img, div7 img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          margin-top: 20px;
+        }
+        div1, div2, div4, div5, div52 {
+          position: static !important;
+          width: 100%;
+          text-align: center;
+        }
+        .purple-button {
+          width: 80%;
+          box-sizing: border-box;
+          font-size: 20px;
+          padding: 15px;
+        }
+        .nav {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          box-sizing: border-box;
+        }
         .main-wrapper {
           flex-direction: column;
           align-items: center;
-          margin-top: 180px;
+          margin-top: 30px;
         }
         .catalog-column {
           width: 100%;
+        }
+        .game-card {
+          flex-direction: column;
+          height: auto;
+        }
+        .game-img-container {
+          width: 100%;
+          height: 180px;
+        }
+        .game-info {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+        }
+        .game-footer {
+          width: 100%;
+          box-sizing: border-box;
+          justify-content: space-between;
         }
       }
     </style>
@@ -276,6 +334,7 @@
             </div>
           </div>
 
+          
           <div class="game-card">
             <div class="game-img-container">
               <img src="https://cdn.steamstatic.com/apps/dota2/images/dota2_social.jpg" class="game-img">
@@ -295,6 +354,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="game-card">
             <div class="game-img-container">
@@ -317,6 +377,7 @@
           </div>
         </div>
 
+
         <div class="catalog-column">
           <div class="game-card">
             <div class="game-img-container">
@@ -337,6 +398,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="game-card">
             <div class="game-img-container">

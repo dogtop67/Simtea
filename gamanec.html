@@ -51,11 +51,9 @@
         .back-btn:hover {
             transform: scale(1.05);
         }
-
         .logo-container {
             text-align: center;
         }
-
         .logo-title {
             font-size: 3rem;
             font-weight: 900;
@@ -122,10 +120,61 @@
             max-width: 1000px;
             text-align: center;
         }
-
         .highlight {
             color: #4bec6e;
             font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                margin-bottom: 25px;
+                padding-top: 60px; 
+            }
+            .back-btn {
+                padding: 12px 24px;
+                font-size: 1rem;
+                top: 15px;
+                left: 15px;
+            }
+
+            .logo-title {
+                font-size: 2.2rem;
+            }
+
+            .wallet-card {
+                padding: 30px 20px;
+                border-radius: 16px;
+            }
+
+            .wallet-icon {
+                font-size: 4rem;
+                margin-bottom: 10px;
+            }
+
+            .balance-label {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .balance-amount {
+                font-size: 6rem; 
+                margin-bottom: 25px;
+            }
+
+            .divider {
+                width: 80%;
+                margin-bottom: 25px;
+            }
+
+            .wallet-notice {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
         }
     </style>
 </head>
@@ -136,7 +185,7 @@
         <div class="logo-container">
             <div class="logo-title">Simtea</div>
         </div>
-        <div style="width: 140px;"></div>
+        <div style="width: 140px;" class="desktop-spacer"></div>
     </div>
     <div class="wallet-card">
         <div class="wallet-icon">💳</div>

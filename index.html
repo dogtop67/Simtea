@@ -166,10 +166,11 @@
         display: flex;
         align-items: center;
         background-color: #10141d;
-        padding: 8px 12px;
+        padding: 4px;
         border-radius: 3px;
         height: 46px;
         flex-shrink: 0;
+        gap: 10px;
       }
 
       .discount-badge {
@@ -179,7 +180,7 @@
         font-size: 14px;
         padding: 4px 6px;
         border-radius: 2px;
-        margin-right: 8px;
+        margin-left: 4px;
       }
 
       .price-box {
@@ -187,6 +188,7 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
+        padding: 0 8px;
       }
 
       .old-price {
@@ -199,11 +201,40 @@
         font-size: 14px;
         font-weight: 500;
         color: #beee11;
+        white-space: nowrap;
       }
 
       .single-price .current-price {
         color: #ffffff;
       }
+
+      .buy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, #47b230 0%, #5cba42 100%);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0 15px;
+        height: 100%;
+        border-radius: 2px;
+        transition: background 0.2s;
+      }
+
+      .buy-button:hover {
+        background: linear-gradient(to right, #51ca37 0%, #6ade4f 100%);
+      }
+
+      .buy-button.free {
+        background: linear-gradient(to right, #106aae 0%, #1783ce 100%);
+      }
+
+      .buy-button.free:hover {
+        background: linear-gradient(to right, #137ecb 0%, #2096eb 100%);
+      }
+
       @media (max-width: 960px) {
         header {
           display: flex;
@@ -269,6 +300,7 @@
           width: 100%;
           box-sizing: border-box;
           justify-content: space-between;
+          height: 50px;
         }
       }
     </style>
@@ -277,8 +309,7 @@
     <header>
       <p> <img src="Simtea.png" width="250"> </p> 
       <div3> <img src="Simbe.png" width="300"> </div3> 
-      <div7> <a href="controler.html">
-    <img src="Sim controler.png"  style="width: 100%; max-width: 500px; height: auto; "></a> </div7>
+         <div7> <a href="controler.html"> <img src="Sim controler.png"  style="width: 100%; max-width: 500px; height: auto; "></a> </div7>
     </header>
     <nav>
       <div1> <a href="vidguki.html" class="purple-button">Відгуки</a> </div1>
@@ -310,6 +341,7 @@
                   <span class="old-price">599 ₴</span>
                   <span class="current-price">299 ₴</span>
                 </div>
+                <a href="form.html" class="buy-button">Купити</a>
               </div>
             </div>
           </div>
@@ -330,11 +362,11 @@
                 <div class="price-box">
                   <span class="current-price">2 299₴</span>
                 </div>
+                <a href="form.html" class="buy-button">Купити</a>
               </div>
             </div>
           </div>
 
-          
           <div class="game-card">
             <div class="game-img-container">
               <img src="https://cdn.steamstatic.com/apps/dota2/images/dota2_social.jpg" class="game-img">
@@ -349,12 +381,12 @@
               </div>
               <div class="game-footer">
                 <div class="price-box single-price">
-                  <span class="current-price">Безкоштовно</span>
+                  <span class="current-price">У бібліотеці</span>
                 </div>
+                <a href="#" id="dota-btn" class="buy-button free">Грати</a>
               </div>
             </div>
           </div>
-
 
           <div class="game-card">
             <div class="game-img-container">
@@ -372,10 +404,12 @@
                 <div class="price-box">
                   <span class="current-price">74₴</span>
                 </div>
+                <a href="form.html" class="buy-button">Купити</a>
               </div>
             </div>
           </div>
         </div>
+
 
 
         <div class="catalog-column">
@@ -393,13 +427,12 @@
               </div>
                <div class="game-footer">
                 <div class="price-box single-price">
-                  <span class="current-price">Безкоштовно</span>
+                  <span class="current-price">У бібліотеці</span>
                 </div>
+                <a href="#" class="buy-button free">Грати</a>
               </div>
             </div>
           </div>
-
-
           <div class="game-card">
             <div class="game-img-container">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU4SFl2QG5hshRhLwYWE5k1m4HU5DXCllmNw&s" class="game-img">
@@ -416,10 +449,10 @@
                 <div class="price-box">
                   <span class="current-price">899₴</span>
                 </div>
+                <a href="form.html" class="buy-button">Купити</a>
               </div>
             </div>
           </div>
-
           <div class="game-card">
             <div class="game-img-container">
               <img src="https://hot.game/uploads/media/poster_game/0001/04/42dfd59b19fb18bea015e49d5e14fa7d9cb889c3.jpeg" class="game-img">
@@ -433,15 +466,16 @@
                 </div>
               </div>
               <div class="game-footer">
-                     <div class="discount-badge">-30%</div>
+                <div class="discount-badge">-30%</div>
                 <div class="price-box">
                   <span class="old-price">399 ₴</span>
                   <span class="current-price">299 ₴</span>
                 </div>
+                <a href="form.html" class="buy-button">Купити</a>
               </div>
             </div>
           </div>
-
+          
           <div class="game-card">
             <div class="game-img-container">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8SEPlpOJMIdkw3w351WpBAqWWL-nhIBhsvg&s" class="game-img">
@@ -454,9 +488,10 @@
                 </div>
               </div>
               <div class="game-footer">
-                <div class="price-box">
-                  <span class="current-price">155₴</span>
+                <div class="price-box single-price">
+                  <span class="current-price">У бібліотеці</span>
                 </div>
+                <a href="#" class="buy-button free">Грати</a>
               </div>
             </div>
           </div>
@@ -466,5 +501,20 @@
     <footer>
       <h2>Поки що це все</h2>
     </footer>
+
+
+    <script>
+      document.querySelectorAll('.buy-button.free').forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault(); 
+          
+          if (this.id === 'dota-btn') {
+            alert('Я попереджав. Запуск...');
+          } else {
+            alert('Запуск...');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

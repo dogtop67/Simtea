@@ -210,6 +210,68 @@
         .play-btn:hover {
             background-color: #1c8e5c;
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column-reverse; 
+                gap: 15px;
+                margin-bottom: 25px;
+            }
+
+            .back-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .logo-title {
+                font-size: 2.2rem;
+            }
+
+            .profile-container {
+                flex-direction: column; 
+                gap: 30px;
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .profile-sidebar {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .avatar-container {
+                width: 150px;
+                height: 150px;
+                font-size: 4rem;
+            }
+
+            .username {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                text-align: center;
+            }
+
+            .game-item {
+                flex-direction: column; 
+                gap: 15px;
+                text-align: center;
+                padding: 15px;
+            }
+
+
+            .play-btn {
+                width: 100%; 
+            }
+            
+        }
     </style>
 </head>
 <body>
@@ -217,9 +279,9 @@
     <div class="header">
         <a href="index.html" class="back-btn">←</a>
         <div class="logo-container">
-            <div class="logo-title">Simtea</span></div>
+            <div class="logo-title">Simtea</div>
         </div>
-        <div style="width: 140px;"></div>
+        <div style="width: 140px;" class="desktop-spacer"></div>
     </div>
 
     <div class="profile-container">

@@ -1,169 +1,470 @@
 <!DOCTYPE html>
-<html lang="uk">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <title>Відгуки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simtea</title>
     <style>
-        body {
-          background: linear-gradient(to top, #33c43a 20%, #3248FF 100%);
-      height: 100vh;
-       
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 0;
-            margin: 0;
+      .main-image {
+            width: 100%;
+            max-height: 65vh;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 2px solid #56FF6E;
+            box-shadow: 0 0 20px rgba(86, 255, 110, 0.2);
         }
+      H2{
+        text-align: center;
+        color:azure;
+      }
+      div7{
+        position: absolute;
+        top: 50px;
+        Left: 285px;
+      }
+      body {
+        background: linear-gradient(to top, #33c43a 20%, #3248FF 100%);
+        min-height: 100vh;
+        margin: 0;
+        padding: 10px;
+        background-color: #33c43a;
+        font-family: sans-serif;
+      }
+      .purple-button {
+        text-decoration: none;
+        color: black;
+        padding: 20px 35px;
+        background-color: rgba(0, 128, 0, 0.541);
+        border-radius: 8px;
+        transition: all 0.4s;
+        display: inline-block;
+        font-size: 27px;
+      }
+      .purple-button:hover {
+        background-color: #36a73d;
+      }
+      div1 {
+        position: absolute;
+        top: 100px;
+        right: 20px;
+      }
+      p {
+        text-align: center;
+      }
+      div2 {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+      div3 {
+        position: absolute;
+        top: 15px;
+        right: 300px;
+      }
+      .nav {
+        background-color: rgb(0, 0, 0);
+        color: #1eff00; 
+        padding: 20px;
+        margin: 10px; 
+        border-radius: 10%;
+        text-decoration: none;
+      }
+      div4 {
+        position: absolute;
+        top: 40px;
+      }
+      div5 {
+        position: absolute;
+        top: 110px;
+      }
+      div52{
+        position: absolute;
+        top:180px;
+        left:10px;
+      }
+      
+      .main-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px; 
+        max-width: 1400px;
+        margin: 160px auto 0 auto; 
+        padding: 0 20px;
+      }
+      .catalog-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; 
+        flex: 1;
+        max-width: 650px;
+      }
 
+      .game-card {
+        background-color: #171d28;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: row;
+        width: 100%; 
+        height: 150px;
+        border: 1px solid #212b3d;
+        box-sizing: border-box;
+      }
+
+      .game-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(86, 255, 110, 0.1);
+        border-color: #56FF6E;
+      }
+
+      .game-img-container {
+        width: 200px;
+        height: 100%;
+        flex-shrink: 0;
+        background-color: #121620;
+      }
+
+      .game-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .game-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .game-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .game-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .game-tags span {
+        background-color: #222b3c;
+        color: #96a7bc;
+        font-size: 11px;
+        padding: 3px 8px;
+        border-radius: 2px;
+      }
+
+      .game-footer {
+        display: flex;
+        align-items: center;
+        background-color: #10141d;
+        padding: 8px 12px;
+        border-radius: 3px;
+        height: 46px;
+        flex-shrink: 0;
+      }
+
+      .discount-badge {
+        background-color: #56FF6E;
+        color: #000000;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 4px 6px;
+        border-radius: 2px;
+        margin-right: 8px;
+      }
+
+      .price-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .old-price {
+        font-size: 11px;
+        text-decoration: line-through;
+        color: #626d7b;
+      }
+
+      .current-price {
+        font-size: 14px;
+        font-weight: 500;
+        color: #beee11;
+      }
+
+      .single-price .current-price {
+        color: #ffffff;
+      }
+      @media (max-width: 960px) {
         header {
-            padding: 30px;
-            margin-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
+        header p, div3, div7 {
+          position: static !important;
+          margin: 0 !important;
+          text-align: center;
         }
-
-        header p {
-            margin: 10px 0 0 0;
-            font-size: 16px;
+        header img, div3 img, div7 img {
+          max-width: 100% !important;
+          height: auto !important;
         }
-
-        .main-content {
-            display: flex; 
-            justify-content: center; 
-            gap: 30px; 
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          margin-top: 20px;
         }
-        .reviews-column {
-            flex: 1.5; 
-            text-align: left;
+        div1, div2, div4, div5, div52 {
+          position: static !important;
+          width: 100%;
+          text-align: center;
         }
-        .form-column {
-            flex: 1; 
+        .purple-button {
+          width: 80%;
+          box-sizing: border-box;
+          font-size: 20px;
+          padding: 15px;
         }
-        .review-block {
-            background-color: white;
-            border: 2px solid #36a73d;
-            margin-bottom: 20px; 
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            text-align: left;
+        .nav {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          box-sizing: border-box;
         }
-
-        .author {
-            font-weight: bold;
-            color: #028a02;
-            font-size: 16px;
+        .main-wrapper {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 30px;
         }
-
-        .rating {
-            color: #ffcc00;
-            font-size: 18px;
-            margin: 5px 0;
+        .catalog-column {
+          width: 100%;
         }
-        .form-block {
-            background-color: #e6f4e6;
-            border: 2px dashed #028a02;
-            padding: 20px;
-            position: sticky; 
-            top: 20px;
+        .game-card {
+          flex-direction: column;
+          height: auto;
         }
-
-        .form-block h3 {
-            color: #028a02;
-            margin-top: 0;
-            margin-bottom: 15px;
+        .game-img-container {
+          width: 100%;
+          height: 180px;
         }
-        input, textarea {
-            width: 95%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            font-size: 14px;
-            box-sizing: border-box; 
+        .game-info {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
         }
-        .btn {
-            background-color: #2f25b9;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 15px;
-            width: 100%; 
+        .game-footer {
+          width: 100%;
+          box-sizing: border-box;
+          justify-content: space-between;
         }
-        .btn:hover {
-            background-color: #0502a1;
-        }
-        .back-link {
-            background-color: #028a02;
-            color: #000000;
-            text-decoration: none;
-            padding: 20px;
-            border-radius: 10%;
-            position: absolute;
-            Top: 20px;
-            left: 20px;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <h1>Відгуки про Simtea</h1>
-        <p>Дізнайтеся, що думають наші клієнти, або поділіться своїми враженнями!</p>
+      <p> <img src="Simtea.png" width="250"> </p> 
+      <div3> <img src="Simbe.png" width="300"> </div3> 
+      <div7> <a href="controler.html">
+    <img src="Sim controler.png"  style="width: 100%; max-width: 500px; height: auto; "></a> </div7>
     </header>
-
-    <div class="main-content">
+    <nav>
+      <div1> <a href="vidguki.html" class="purple-button">Відгуки</a> </div1>
+      <div2> <a href="vidguki.html" class="purple-button">Залишити Відгук</a> </div2>
+      <div4> <a href="gamanec.html" class="nav">💳Simtea гаманець</a> </div4>
+      <div5> <a href="acaunt.html" class="nav">👤Акаунт</a> </div5>
+    </nav>
+    
+    <main>
+      <div class="main-wrapper">
         
-        <div class="reviews-column">
-            <div class="review-block">
-                <p class="author">👨 Саша:</p>
-                <div class="rating">⭐⭐⭐⭐⭐</div>
-                <p>Прикольно.😊 Ціни навіть вигідніші ніж в Steam, корпорація Simbe як завжди робить класні речі.</p>
+        <div class="catalog-column">
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/c05e66e166b0fc5fc2a06711d7bfa1b4cb2f45f6/capsule_616x353.jpg?t=1781536981" class="game-img">
             </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Rust</h3>
+                <div class="game-tags">
+                  <span>Виживання</span>
+                  <span>Симулятор</span>
+                  <span>Інді</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                <div class="discount-badge">-50%</div>
+                <div class="price-box">
+                  <span class="old-price">599 ₴</span>
+                  <span class="current-price">299 ₴</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <div class="review-block">
-                <p class="author">👩 Катя:</p>
-                <div class="rating">⭐⭐⭐⭐</div>
-                <p>Класно. І назви такі як simtea і simbe в загалі не позичені.</p>
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://store-images.s-microsoft.com/image/apps.24935.14202278764680089.8e4c786a-0a1c-4737-a244-0bdfa34aab7b.40c11e20-8ff6-4db3-9365-faad9fa06d1a?q=90&w=480&h=270" class="game-img">
             </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Forza Horizon 6</h3>
+                <div class="game-tags">
+                  <span>Водіння</span>
+                  <span>Гонки</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                <div class="price-box">
+                  <span class="current-price">2 299₴</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <div class="review-block">
-                <p class="author">👦 Володимир:</p>
-                <div class="rating">⭐⭐⭐⭐⭐</div>
-                <p>Найкращий магазин ігор.🥺 Тепер можна трохи мені закинути на гаманець ?</p>
+          
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://cdn.steamstatic.com/apps/dota2/images/dota2_social.jpg" class="game-img">
             </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Dota 2 (не треба будь ласка)</h3>
+                <div class="game-tags">
+                  <span>Пригоди</span>
+                  <span>Інді</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                <div class="price-box single-price">
+                  <span class="current-price">Безкоштовно</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <div class="review-block">
-                <p class="author">🤓 Дмитро:</p>
-                <div class="rating">⭐⭐</div>
-                <p>Мало ігор, я засмучений.😢Але якщо їх буде більше то буде на 5 зірок.</p>
+
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VfHgTdVO6K8K1V33aB0TBR78KxFDYRCJ6w&s" class="game-img">
             </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Voxel Tanks</h3>
+                <div class="game-tags">
+                  <span>Шутер</span>
+                  <span>Мультиплеєр</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                <div class="price-box">
+                  <span class="current-price">74₴</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="form-column">
-            <div class="form-block">
-                <h3>Залишити свій відгук:</h3>
-                <form onsubmit="alert('Дякуємо за відгук! Він з\'явиться після перевірки.'); return false;">
-                    <input type="text" placeholder="Ваше ім'я" required><br>
-                    <input type="text" placeholder="Ваша оцінка (від 1 до 5)" required><br>
-                    <textarea placeholder="Ваш відгук..." rows="4" required></textarea><br>
-                    <button type="submit" class="btn">Надіслати відгук</button>
-                </form>
+
+        <div class="catalog-column">
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://www.belloflostsouls.net/wp-content/uploads/2022/07/TF2-feat.png" class="game-img">
             </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Team Fortress 2</h3>
+                <div class="game-tags">
+                  <span>Стрілянка</span>
+                  <span>Бойовик</span>
+                </div>
+              </div>
+               <div class="game-footer">
+                <div class="price-box single-price">
+                  <span class="current-price">Безкоштовно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU4SFl2QG5hshRhLwYWE5k1m4HU5DXCllmNw&s" class="game-img">
+            </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Subnautica 2</h3>
+                <div class="game-tags">
+                  <span>Багатокористувацька гра</span>
+                  <span>Підводний світ</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                <div class="price-box">
+                  <span class="current-price">899₴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://hot.game/uploads/media/poster_game/0001/04/42dfd59b19fb18bea015e49d5e14fa7d9cb889c3.jpeg" class="game-img">
+            </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">Euro Truck Simulator 2</h3>
+                <div class="game-tags">
+                  <span>Водіння</span>
+                  <span>Симулятор</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                     <div class="discount-badge">-30%</div>
+                <div class="price-box">
+                  <span class="old-price">399 ₴</span>
+                  <span class="current-price">299 ₴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-card">
+            <div class="game-img-container">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8SEPlpOJMIdkw3w351WpBAqWWL-nhIBhsvg&s" class="game-img">
+            </div>
+            <div class="game-info">
+              <div>
+                <h3 class="game-title">MECCHA CHAMELEON</h3>
+                <div class="game-tags">
+                  <span>Хованки</span>
+                </div>
+              </div>
+              <div class="game-footer">
+                <div class="price-box">
+                  <span class="current-price">155₴</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </div>
-
-    <a href="index.html" class="back-link">←</a>
-
-</body>
+      </div>
+    </main>
+    <footer>
+      <h2>Поки що це все</h2>
+    </footer>
+  </body>
 </html>

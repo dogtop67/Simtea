@@ -165,7 +165,7 @@
           padding: 20px;
         }
       }
-       .purple-button {
+      .purple-button {
         text-decoration: none;
         color: black;
         padding: 20px 35px;
@@ -198,11 +198,25 @@
             <label for="game-select">Оберіть гру</label>
             <select id="game-select" required>
               <option value="" disabled selected>Виберіть гру зі списку</option>
+              
               <option value="299" data-name="Rust">Rust = 299₴</option>
               <option value="2299" data-name="Forza Horizon 6">Forza Horizon 6 = 2299₴</option>
               <option value="74" data-name="Voxel Tanks">Voxel Tanks = 74₴</option>
+              <option value="90" data-name="Among Us">Among Us = 90₴</option>
+              <option value="114" data-name="Terraria">Terraria = 114₴</option>
+              <option value="1499" data-name="Red Dead Redemption 2">Red Dead Redemption 2 = 1499₴</option>
+              <option value="229" data-name="Stardew Valley">Stardew Valley = 229₴</option>
+              <option value="149" data-name="Undertale">Undertale = 149₴</option>
+              <option value="379" data-name="S.T.A.L.K.E.R. 2">S.T.A.L.K.E.R. 2 = 379₴</option>
+              
               <option value="899" data-name="Subnautica 2">Subnautica 2 = 899₴</option>
               <option value="299" data-name="Euro Truck Simulator 2">Euro Truck Simulator 2 = 299₴</option>
+              <option value="549" data-name="Cyberpunk 2077">Cyberpunk 2077 = 549₴</option>
+              <option value="629" data-name="GTA V">GTA V = 629₴</option>
+              <option value="22" data-name="Left 4 Dead 2">Left 4 Dead 2 = 22₴</option>
+              <option value="420" data-name="Plants vs. Zombies">Plants vs. Zombies = 420₴</option>
+              <option value="151" data-name="Dead by Daylight">Dead by Daylight = 151₴</option>
+              <option value="330" data-name="The Long Drive">The Long Drive = 330₴</option>
             </select>
           </div>
 
@@ -240,7 +254,6 @@
       gameSelect.addEventListener('change', function() {
         const price = this.value;
         if(price) {
- 
           totalPriceDisplay.textContent = Number(price).toLocaleString('uk-UA') + ' ₴';
         } else {
           totalPriceDisplay.textContent = '0 ₴';
@@ -253,7 +266,7 @@
         const selectedGame = gameSelect.options[gameSelect.selectedIndex].getAttribute('data-name');
         const paymentMethod = document.getElementById('payment-method').options[document.getElementById('payment-method').selectedIndex].text;
         
-        alert(`Дякую!\nГра успішно придбана.`);
+        alert(`Дякую! Гра успішно придбана.`);
       });
     </script>
   </body>

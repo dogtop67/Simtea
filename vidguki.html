@@ -14,7 +14,19 @@
             padding: 0;
             margin: 0;
         }
-
+   .purple-button {
+        text-decoration: none;
+        color: black;
+        padding: 20px 35px;
+        background-color: rgba(0, 128, 0, 0.541);
+        border-radius: 8px;
+        transition: all 0.4s;
+        display: inline-block;
+        font-size: 27px;
+      }
+      .purple-button:hover {
+        background-color: #36a73d;
+      }
         header {
             padding: 30px;
             margin-bottom: 30px;
@@ -140,12 +152,19 @@
             input, textarea {
                 width: 100%; 
             }
-            .back-link {
-                top: 15px;
-                left: 15px;
-                padding: 12px 18px;
-                font-size: 18px;
+            .purple-button{
+               padding: 12px 17px;
             }
+            div42{
+                position: absolute;
+                top:10px;
+                left:10px;
+            }
+        }
+        div42{
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
     </style>
 </head>
@@ -195,6 +214,6 @@
             </div>
         </div>
     </div>
-    <a href="index.html" class="back-link">←</a>
+    <div42> <a href="index.html" class="purple-button">←</a> </div42> 
 </body>
 </html>

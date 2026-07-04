@@ -17,22 +17,50 @@
         text-align: center;
         color:azure;
       }
-      div7{
-        position: absolute;
-        top: 50px;
-        Left: 285px;
-      }
       body {
         background: linear-gradient(to top, #33c43a 20%, #3248FF 100%);
         min-height: 100vh;
         margin: 0;
-        padding: 10px;
+        padding: 0;
         background-color: #33c43a;
         font-family: sans-serif;
       }
-      .purple-button {
+      
+      header {
+        background-color: #171a21;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 5%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .logo-area img {
+        height: 150px;
+        width: auto;
+        display: block;
+      }
+
+      .logo-area a {
+        display: flex;
+        align-items: center;
+      }
+      
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+     .purple-button {
         text-decoration: none;
-        color: black;
+        color: rgb(196, 193, 193);
         padding: 20px 35px;
         background-color: rgba(0, 128, 0, 0.541);
         border-radius: 8px;
@@ -42,45 +70,11 @@
       }
       .purple-button:hover {
         background-color: #36a73d;
+        color: #ffffff;
       }
-      div1 {
-        position: absolute;
-        top: 100px;
-        right: 20px;
-      }
+      
       p {
         text-align: center;
-      }
-      div2 {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-      }
-      div3 {
-        position: absolute;
-        top: 15px;
-        right: 300px;
-      }
-      .nav {
-        background-color: rgb(0, 0, 0);
-        color: #1eff00; 
-        padding: 20px;
-        margin: 10px; 
-        border-radius: 10%;
-        text-decoration: none;
-      }
-      div4 {
-        position: absolute;
-        top: 40px;
-      }
-      div5 {
-        position: absolute;
-        top: 110px;
-      }
-      div52{
-        position: absolute;
-        top:180px;
-        left:10px;
       }
       
       .main-wrapper {
@@ -88,7 +82,7 @@
         justify-content: center;
         gap: 40px; 
         max-width: 1400px;
-        margin: 160px auto 0 auto; 
+        margin: 40px auto 0 auto; 
         padding: 0 20px;
       }
       .catalog-column {
@@ -118,6 +112,12 @@
         border-color: #56FF6E;
       }
 
+      .card-link {
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+      }
+
       .game-img-container {
         width: 200px;
         height: 100%;
@@ -139,6 +139,20 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+      }
+
+      .controller-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 1;
+      }
+
+      .controller-price {
+        color: #96a7bc;
+        font-size: 14px;
       }
 
       .game-title {
@@ -236,44 +250,40 @@
       }
 
       @media (max-width: 960px) {
-        header {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 15px;
+        body {
+          padding: 10px;
         }
-        header p, div3, div7 {
-          position: static !important;
-          margin: 0 !important;
+        header {
+          background-color: transparent;
+          box-shadow: none;
+          display: block;
+          padding: 10px;
           text-align: center;
         }
-        header img, div3 img, div7 img {
+        .logo-area {
+          display: block;
+          margin: 0 auto;
+        }
+        .logo-area img {
           max-width: 100% !important;
           height: auto !important;
+          margin: 0 auto 15px auto;
         }
         nav {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 20px;
-          margin-top: 20px;
-        }
-        div1, div2, div4, div5, div52 {
-          position: static !important;
+          gap: 10px;
           width: 100%;
-          text-align: center;
+          margin: 20px auto;
+          padding: 10px;
         }
         .purple-button {
-          width: 80%;
+          width: 90%;
+          text-align: center;
           box-sizing: border-box;
           font-size: 20px;
-          padding: 15px;
-        }
-        .nav {
-          display: block;
-          width: 80%;
-          margin: 0 auto;
-          box-sizing: border-box;
+          padding: 15px 25px;
         }
         .main-wrapper {
           flex-direction: column;
@@ -291,10 +301,12 @@
           width: 100%;
           height: 180px;
         }
-        .game-info {
+        .game-info, .controller-info {
           flex-direction: column;
           align-items: flex-start;
           gap: 15px;
+          width: 100%;
+          box-sizing: border-box;
         }
         .game-footer {
           width: 100%;
@@ -306,22 +318,37 @@
     </style>
   </head>
   <body>
+    
     <header>
-      <p> <img src="Simtea.png" width="250"> </p> 
-      <div3> <img src="Simbe.png" width="300"> </div3> 
-         <div7> <a href="controler.html"> <img src="Sim controler.png"  style="width: 100%; max-width: 500px; height: auto; "></a> </div7>
+      <div class="logo-area">
+        <img src="Simtea.png">
+        <img src="Simbe.png">
+      </div>
+      <nav>
+        <a href="vidguki.html" class="purple-button">📰Відгуки</a>
+        <a href="vidguki.html" class="purple-button">📝Залишити Відгук</a>
+        <a href="gamanec.html" class="purple-button">💳Simtea гаманець</a>
+        <a href="acaunt.html" class="purple-button">👤Акаунт</a>
+      </nav>
     </header>
-    <nav>
-      <div1> <a href="vidguki.html" class="purple-button">Відгуки</a> </div1>
-      <div2> <a href="vidguki.html" class="purple-button">Залишити Відгук</a> </div2>
-      <div4> <a href="gamanec.html" class="nav">💳Simtea гаманець</a> </div4>
-      <div5> <a href="acaunt.html" class="nav">👤Акаунт</a> </div5>
-    </nav>
     
     <main>
        <div class="main-wrapper">
         
         <div class="catalog-column">
+          
+          <a href="controler.html" class="card-link">
+            <div class="game-card">
+              <div class="game-img-container">
+                <img src="Sim controler.png" class="game-img">
+              </div>
+              <div class="controller-info">
+                <h3 class="game-title">Sim контролер</h3>
+                <div class="controller-price">Ціна : 1 299 грн</div>
+              </div>
+            </div>
+          </a>
+
           <div class="game-card">
             <div class="game-img-container">
               <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/c05e66e166b0fc5fc2a06711d7bfa1b4cb2f45f6/capsule_616x353.jpg?t=1781536981" class="game-img">
@@ -514,29 +541,7 @@
               </div>
             </div>
           </div>
-
-          <div class="game-card">
-            <div class="game-img-container">
-              <img src="https://unn.ua/img/2024/11/20/1732109419-3474-large.webp" class="game-img">
-            </div>
-            <div class="game-info">
-              <div>
-                <h3 class="game-title">S.T.A.L.K.E.R. 2</h3>
-                <div class="game-tags">
-                  <span>Бойовик</span>
-                  <span>Пригоди</span>
-                </div>
-              </div>
-              <div class="game-footer">
-                <div class="price-box">
-                  <span class="current-price">379 ₴</span>
-                </div>
-                <a href="form.html" class="buy-button">Купити</a>
-              </div>
-            </div>
-          </div>
         </div>
-
 
         <div class="catalog-column">
           <div class="game-card">
@@ -700,7 +705,7 @@
                   <span>Зомбі</span>
                   <span>Весело</span>
                 </div>
-                 </div>
+                   </div>
               <div class="game-footer">
                 <div class="discount-badge">-35%</div>
                 <div class="price-box">

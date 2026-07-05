@@ -1,0 +1,309 @@
+  .main-image {
+            width: 100%;
+            max-height: 65vh;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 2px solid #56FF6E;
+            box-shadow: 0 0 20px rgba(86, 255, 110, 0.2);
+        }
+      H2{
+        text-align: center;
+        color:azure;
+      }
+      body {
+        background: linear-gradient(to top, #33c43a 20%, #3248FF 100%);
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: #33c43a;
+        font-family: sans-serif;
+      }
+      
+      header {
+        background-color: #171a21;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 5%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .logo-area img {
+        height: 150px;
+        width: auto;
+        display: block;
+      }
+
+      .logo-area a {
+        display: flex;
+        align-items: center;
+      }
+      
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .purple-button {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 20px 35px;
+        background-color: rgba(0, 128, 0, 0.705);
+        border-radius: 8px;
+        transition: all 0.4s;
+        display: inline-block;
+        font-size: 27px;
+      }
+      .purple-button:hover {
+        background-color: #36a73d;
+      }
+      
+      p {
+        text-align: center;
+      }
+      
+      .main-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px; 
+        max-width: 1400px;
+        margin: 40px auto 0 auto; 
+        padding: 0 20px;
+      }
+      .catalog-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; 
+        flex: 1;
+        max-width: 650px;
+      }
+
+      .game-card {
+        background-color: #171d28;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: row;
+        width: 100%; 
+        height: 150px;
+        border: 1px solid #212b3d;
+        box-sizing: border-box;
+      }
+
+      .game-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(86, 255, 110, 0.1);
+        border-color: #56FF6E;
+      }
+
+      .card-link {
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+      }
+
+      .game-img-container {
+        width: 200px;
+        height: 100%;
+        flex-shrink: 0;
+        background-color: #121620;
+      }
+
+      .game-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .game-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .controller-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 1;
+      }
+
+      .controller-price {
+        color: #96a7bc;
+        font-size: 14px;
+      }
+
+      .game-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #ffffff;
+      }
+
+      .game-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .game-tags span {
+        background-color: #222b3c;
+        color: #96a7bc;
+        font-size: 11px;
+        padding: 3px 8px;
+        border-radius: 2px;
+      }
+
+      .game-footer {
+        display: flex;
+        align-items: center;
+        background-color: #10141d;
+        padding: 4px;
+        border-radius: 3px;
+        height: 46px;
+        flex-shrink: 0;
+        gap: 10px;
+      }
+
+      .discount-badge {
+        background-color: #56FF6E;
+        color: #000000;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 4px 6px;
+        border-radius: 2px;
+        margin-left: 4px;
+      }
+
+      .price-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 8px;
+      }
+
+      .old-price {
+        font-size: 11px;
+        text-decoration: line-through;
+        color: #626d7b;
+      }
+
+      .current-price {
+        font-size: 14px;
+        font-weight: 500;
+        color: #beee11;
+        white-space: nowrap;
+      }
+
+      .single-price .current-price {
+        color: #ffffff;
+      }
+
+      .buy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, #47b230 0%, #5cba42 100%);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0 15px;
+        height: 100%;
+        border-radius: 2px;
+        transition: background 0.2s;
+      }
+
+      .buy-button:hover {
+        background: linear-gradient(to right, #51ca37 0%, #6ade4f 100%);
+      }
+
+      .buy-button.free {
+        background: linear-gradient(to right, #106aae 0%, #1783ce 100%);
+      }
+
+      .buy-button.free:hover {
+        background: linear-gradient(to right, #137ecb 0%, #2096eb 100%);
+      }
+
+      @media (max-width: 960px) {
+        body {
+          padding: 10px;
+        }
+        header {
+          background-color: transparent;
+          box-shadow: none;
+          display: block;
+          padding: 10px;
+          text-align: center;
+        }
+        .logo-area {
+          display: block;
+          margin: 0 auto;
+        }
+        .logo-area img {
+          max-width: 100% !important;
+          height: auto !important;
+          margin: 0 auto 15px auto;
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          width: 100%;
+          margin: 20px auto;
+          padding: 10px;
+        }
+        .purple-button {
+          width: 90%;
+          text-align: center;
+          box-sizing: border-box;
+          font-size: 20px;
+          padding: 15px 25px;
+        }
+        .main-wrapper {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 30px;
+        }
+        .catalog-column {
+          width: 100%;
+        }
+        .game-card {
+          flex-direction: column;
+          height: auto;
+        }
+        .game-img-container {
+          width: 100%;
+          height: 180px;
+        }
+        .game-info, .controller-info {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .game-footer {
+          width: 100%;
+          box-sizing: border-box;
+          justify-content: space-between;
+          height: 50px;
+        }
+      }

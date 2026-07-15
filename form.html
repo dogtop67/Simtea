@@ -1,97 +1,100 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Замовлення</title>
-    <link rel="stylesheet" href="style_form.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Замовлення</title>
+  <link rel="stylesheet" href="style_form.css">
+</head>
+<body>
 
-    <header>
-      <a href="index.html" class="logo-link">
-        <img src="Simtea.png" width="200" alt="SIMBE Corporation" onerror="this.style.display='none'">
-      </a>
-      <a href="index.html" class="purple-button">←</a>
-    </header>
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="Simtea.png" width="200" alt="SIMBE Corporation" onerror="this.style.display='none'">
+    </a>
+    <a href="index.html" class="purple-button">←</a>
+  </header>
 
-    <main>
-      <div class="form-container">
-        <h1>Оформлення замовлення</h1>
-        
-        <form id="order-form">
+  <main>
+    <div class="form-container">
+      <h1>Оформлення замовлення</h1>
+      <form id="order-form">
+        <div class="form-group">
+          <label for="game-select">Оберіть гру</label>
+          <select id="game-select" required>
+            <option value="" disabled selected>Виберіть гру зі списку</option>
+            <option value="299" data-name="Rust">Rust = 299₴</option>
+            <option value="2299" data-name="Forza Horizon 6">Forza Horizon 6 = 2299₴</option>
+            <option value="74" data-name="Voxel Tanks">Voxel Tanks = 74₴</option>
+            <option value="90" data-name="Among Us">Among Us = 90₴</option>
+            <option value="114" data-name="Terraria">Terraria = 114₴</option>
+            <option value="1499" data-name="Red Dead Redemption 2">Red Dead Redemption 2 = 1499₴</option>
+            <option value="229" data-name="Stardew Valley">Stardew Valley = 229₴</option>
+            <option value="149" data-name="Undertale">Undertale = 149₴</option>
+            <option value="899" data-name="Subnautica 2">Subnautica 2 = 899₴</option>
+            <option value="299" data-name="Euro Truck Simulator 2">Euro Truck Simulator 2 = 299₴</option>
+            <option value="549" data-name="Cyberpunk 2077">Cyberpunk 2077 = 549₴</option>
+            <option value="629" data-name="GTA V">GTA V = 629₴</option>
+            <option value="22" data-name="Left 4 Dead 2">Left 4 Dead 2 = 22₴</option>
+            <option value="420" data-name="Plants vs. Zombies">Plants vs. Zombies = 420₴</option>
+            <option value="151" data-name="Dead by Daylight">Dead by Daylight = 151₴</option>
+            <option value="330" data-name="The Long Drive">The Long Drive = 330₴</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Електронна пошта для чеку</label>
+          <input type="email" id="email" placeholder="yourmail@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="payment-method">Спосіб оплати</label>
+          <select id="payment-method" required>
+            <option value="wallet">💳 Simtea гаманець</option>
+            <option value="card">Банківська картка</option>
+          </select>
+        </div>
+
+        <div id="card-details">
           <div class="form-group">
-            <label for="game-select">Оберіть гру</label>
-            <select id="game-select" required>
-              <option value="" disabled selected>Виберіть гру зі списку</option>
-              
-              <option value="299" data-name="Rust">Rust = 299₴</option>
-              <option value="2299" data-name="Forza Horizon 6">Forza Horizon 6 = 2299₴</option>
-              <option value="74" data-name="Voxel Tanks">Voxel Tanks = 74₴</option>
-              <option value="90" data-name="Among Us">Among Us = 90₴</option>
-              <option value="114" data-name="Terraria">Terraria = 114₴</option>
-              <option value="1499" data-name="Red Dead Redemption 2">Red Dead Redemption 2 = 1499₴</option>
-              <option value="229" data-name="Stardew Valley">Stardew Valley = 229₴</option>
-              <option value="149" data-name="Undertale">Undertale = 149₴</option>
-              <option value="899" data-name="Subnautica 2">Subnautica 2 = 899₴</option>
-              <option value="299" data-name="Euro Truck Simulator 2">Euro Truck Simulator 2 = 299₴</option>
-              <option value="549" data-name="Cyberpunk 2077">Cyberpunk 2077 = 549₴</option>
-              <option value="629" data-name="GTA V">GTA V = 629₴</option>
-              <option value="22" data-name="Left 4 Dead 2">Left 4 Dead 2 = 22₴</option>
-              <option value="420" data-name="Plants vs. Zombies">Plants vs. Zombies = 420₴</option>
-              <option value="151" data-name="Dead by Daylight">Dead by Daylight = 151₴</option>
-              <option value="330" data-name="The Long Drive">The Long Drive = 330₴</option>
-            </select>
+            <label for="card-number">Номер картки</label>
+            <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
           </div>
-
           <div class="form-group">
-            <label for="email">Електронна пошта для чеку</label>
-            <input type="email" id="email" placeholder="yourmail@example.com" required>
+            <label for="card-expiry">Термін дії</label>
+            <input type="text" id="card-expiry" placeholder="ММ/РР" maxlength="5">
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="payment-method">Спосіб оплати</label>
-            <select id="payment-method" required>
-              <option value="wallet">💳 Simtea гаманець</option>
-              <option value="card">Банківська картка</option>
-            </select>
-          </div>
+        <div class="price-summary">
+          <span class="price-label">Всього до сплати:</span>
+          <span class="price-value" id="total-price">0 ₴</span>
+        </div>
 
-          <div class="price-summary">
-            <span class="price-label">Всього до сплати:</span>
-            <span class="price-value" id="total-price">0 ₴</span>
-          </div>
+        <button type="submit" class="submit-button">Підтвердити замовлення</button>
+      </form>
+    </div>
+  </main>
 
-          <button type="submit" class="submit-button">Підтвердити замовлення</button>
-        </form>
-      </div>
-    </main>
+  <script>
+    const gameSelect = document.getElementById('game-select');
+    const paymentMethod = document.getElementById('payment-method');
+    const cardDetails = document.getElementById('card-details');
+    const totalPriceDisplay = document.getElementById('total-price');
 
-    <footer>
-      <h2>SIMBE Corporation</h2>
-    </footer>
+    paymentMethod.addEventListener('change', function() {
+      cardDetails.style.display = (this.value === 'card') ? 'block' : 'none';
+    });
 
-    <script>
-      const gameSelect = document.getElementById('game-select');
-      const totalPriceDisplay = document.getElementById('total-price');
+    gameSelect.addEventListener('change', function() {
+      const price = this.value;
+      totalPriceDisplay.textContent = price ? Number(price).toLocaleString('uk-UA') + ' ₴' : '0 ₴';
+    });
 
-      gameSelect.addEventListener('change', function() {
-        const price = this.value;
-        if(price) {
-          totalPriceDisplay.textContent = Number(price).toLocaleString('uk-UA') + ' ₴';
-        } else {
-          totalPriceDisplay.textContent = '0 ₴';
-        }
-      });
-
-      document.getElementById('order-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const selectedGame = gameSelect.options[gameSelect.selectedIndex].getAttribute('data-name');
-        const paymentMethod = document.getElementById('payment-method').options[document.getElementById('payment-method').selectedIndex].text;
-        
-        alert(`Дякую! Гра успішно придбана.`);
-      });
-    </script>
-  </body>
+    document.getElementById('order-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Дякую! Гра успішно придбана.');
+    });
+  </script>
+</body>
 </html>
